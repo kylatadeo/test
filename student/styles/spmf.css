@@ -1,0 +1,156 @@
+.scaling-wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  transform-origin: top center;
+  width: max-content; /* Prevent container from shrinking its content */
+  transform-origin: top center; /* Ensures scaling is anchored from the center */
+}
+
+/* Responsive scaling */
+
+@media (max-width: 770px) {
+  .container {
+    zoom: 0.64;
+  }
+  body {
+    zoom: 0.70;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 771px) {
+  .container {
+    zoom: 0.72;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  border-right:1px dashed #9c9c9c;
+  border-top:1px solid #9c9c9c; 
+  border-bottom:1px solid #9c9c9c; 
+}
+
+.column:first-child {
+  border-left:1px solid #9c9c9c; 
+}
+
+.column:last-child {
+  border-right:1px solid #9c9c9c;  
+}
+
+.term-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #464651;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.course-box {
+  min-width: 70px; 
+  max-width: 90px;
+  padding: 5px;
+  text-align: center;
+  margin: 5px;
+  white-space: nowrap; /* Prevents text wrapping */
+  border-radius: 5px;
+  font-weight: 500;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.course-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex-grow: 1; /* Pushes units to the bottom */
+}
+
+.total-units {
+  margin-top: 10px;
+  padding: 5px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+#download-spmf-button, .request-button{
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 5px;
+  gap: 5px; 
+}
+
+#download-spmf-button:hover {
+  background-color: #8d1436;
+}
+
+.request-button:hover{
+  background-color: #0056b3;
+
+}
+
+.form-container {
+  width: 100%;
+  text-align: left;
+}
+
+.info-container {
+  display: flex;
+  justify-content: flex-start; /* Distributes sections evenly */
+  align-items: flex-start;
+  gap: 5px; /* Adds spacing between sections */
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.info-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.label {
+  font-weight: bold;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.underline {
+  border-bottom: 1px solid black;
+  min-width: 100px;
+  text-align: left;
+  padding: 2px 5px;
+}
+
+.title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 24px;
+}
+
+.version {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 16px;
+}
+
+.badge {
+  padding-top: 0px;
+  padding-bottom: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 8px;
+}

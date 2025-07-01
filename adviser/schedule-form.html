@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLB CAPS</title>
+    <link rel="icon" type="image/png" href="../icons/uplb-logo-no label.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon" />
+    
+    <!-- from general folder -->
+    <link rel="stylesheet" href="../styles/general.css">
+
+    <!--adviser/report-->
+    <link rel="stylesheet" href="styles/schedule-form.css">
+
+    <script>
+      (function (m, a, z, e) {
+        var s, t;
+        try {
+          t = m.sessionStorage.getItem('maze-us');
+        } catch (err) {}
+      
+        if (!t) {
+          t = new Date().getTime();
+          try {
+            m.sessionStorage.setItem('maze-us', t);
+          } catch (err) {}
+        }
+      
+        s = a.createElement('script');
+        s.src = z + '?apiKey=' + e;
+        s.async = true;
+        a.getElementsByTagName('head')[0].appendChild(s);
+        m.mazeUniversalSnippetApiKey = e;
+      })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '65f6bda7-e9d3-465b-a89d-f3b2567e4c16');
+    </script>
+  </head>
+  <body>
+    <div class="schedule-container bg-white">
+      <div class="title">
+        <h1 class="txt-17 txt-semibold txt-gray1">Schedule Consultation</h1>
+        <p class="txt-13"><i>This will be added to Google Calendar if advisee accepts.</i></p>
+
+        <div class="basic-info">
+          <img src="../icons/profile-user.png">
+          <div>
+            <p class="txt-17 txt-semibold">Student Name</p>
+            <p class="txt-13 txt-gray1">username@up.edu.ph</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-form txt-gray2">
+        <label>Agenda</label>
+        <input type="text" placeholder="Enter agenda" class="input-box">
+
+        <div class="row">
+          <div class="input-group">
+            <label>Date</label>
+            <select class="input-select">
+              <option>Select a date</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Start Time</label>
+            <select class="input-select">
+              <option>Select a time</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>End Time</label>
+            <select class="input-select">
+              <option>Select a time</option>
+            </select>
+          </div>
+        </div>
+
+        <label>Location</label>
+        <input type="text" placeholder="Enter location" class="input-box" />
+
+        <label>Other notes</label>
+        <textarea placeholder="Add notes" class="textarea-box"></textarea>
+      </div>
+
+      <div class="buttons">
+        <button class="cancel-button bg-gray button txt-white">Cancel</button>
+        <button class="set-button bg-blue button txt-white">Confirm</button>
+      </div>
+
+    </div>
+  </body>
+
+  <script>
+    document.querySelector('.cancel-button').addEventListener('click', function () {
+      if (window.parent && typeof window.parent.closeScheduleForm === 'function') {
+        window.parent.closeScheduleForm();
+      }
+    });
+  </script>
+</html>

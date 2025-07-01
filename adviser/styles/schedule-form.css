@@ -1,0 +1,94 @@
+body {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 585.38px;
+}
+
+.schedule-container {
+  border-radius: 4px;
+  padding: 16px 24px;
+  line-height: 150%;
+  max-width: 98vw;
+  width: 500px;
+  border: none;
+  p {
+    margin: 0px;
+  }
+  
+}
+
+.basic-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cbc5d0;
+  margin-bottom: 16px;
+  align-items: center;
+
+  img {
+    width: 30px;
+  }
+  p {
+    margin: 0px;
+    text-wrap: nowrap;
+  }
+  p:nth-child(2) {
+    margin-top: -5px;
+  }
+}
+
+label {
+  display: block;
+  margin: 16px 0 4px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.input-box,
+.textarea-box,
+.input-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.textarea-box {
+  resize: vertical;
+  height: 80px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.input-group {
+  flex: 1;
+}
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+.set-button, .cancel-button {
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.set-button:hover {
+  background-color: #0056b3;
+}
+
+.cancel-button:hover {
+  background-color: #79757c;
+}

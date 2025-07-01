@@ -1,0 +1,151 @@
+body {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 585.38px;
+}
+
+.form-container {
+  border-radius: 4px;
+  padding: 16px 24px;
+  line-height: 150%;
+  max-width: 98vw;
+  width: 500px;
+  border: none;
+  p {
+    margin: 0px;
+  }
+  
+}
+
+.basic-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cbc5d0;
+  margin-bottom: 16px;
+  align-items: center;
+
+  img {
+    width: 30px;
+  }
+  p {
+    margin: 0px;
+    text-wrap: nowrap;
+  }
+  p:nth-child(2) {
+    margin-top: -5px;
+  }
+}
+
+.block {
+  display: block;
+  margin: 16px 0 4px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.checkbox {
+  font-size: 14px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.textarea-box {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  resize: vertical;
+  height: 80px;
+}
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+.set-button, .cancel-button {
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.set-button:hover {
+  background-color: #0056b3;
+}
+
+.cancel-button:hover {
+  background-color: #79757c;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+th, td {
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+th {
+  background-color: #f3f4f6;
+}
+
+td[contenteditable="true"] {
+  background-color: white;
+}
+
+.add-row-btn {
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.add-row-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+select {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

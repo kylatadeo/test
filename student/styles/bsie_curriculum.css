@@ -1,0 +1,74 @@
+body {
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.main-contents {
+  display: grid;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  justify-content: center;
+  grid-template-rows: auto 1fr;
+}
+
+.main-contents img {
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.version {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+.curriculum-img {
+  width: 100%; /* Adjust as needed */
+  max-width: 1000px;
+  display: block; 
+  margin: 20px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  gap: 8px; 
+  margin-top: 5px;
+  padding: 5px 12px ;
+}
+
+.button:hover {
+  background-color: #8d1436;
+}
+
+
+.critical {
+  background-color: #8d1436;
+  color: white;
+}
+
+
+.foundational {
+  background-color: #0a1c48;
+  color: white;
+}
+
+
+.ie {
+  background-color: #00563f;
+  color: white;
+}

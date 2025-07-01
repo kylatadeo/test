@@ -1,0 +1,448 @@
+body {
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.report-container {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 20px;
+  width: 1216px;
+}
+
+.progress-overview, .planning-overview {
+  background-color: white;
+  border-radius: 4px;
+  padding: 16px 24px;
+  line-height: 150%;
+  margin-bottom: 16px;
+  max-width: 98vw;
+  border-color: #e5e7eb;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
+}
+
+.basic-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cbc5d0;
+  margin-bottom: 16px;
+
+  img {
+    width: 40px;
+  }
+
+  p {
+    margin: 0px;
+    text-wrap: nowrap;
+  }
+}
+
+.badge {
+  padding-top: 0px;
+  padding-bottom: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 8px;
+}
+
+.info-badge {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  p {
+    margin: 3px;
+  }
+}
+
+/* degree progress */
+/* Container */
+.progress-container {
+  width: 100%;
+  margin: 10px auto;
+  text-align: left;
+}
+
+.progress-info {
+  display: flex;
+  align-items: center;
+}
+
+.progress-text {
+  margin-left: 10px;
+  margin-bottom: -5px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #088f62;
+  position: absolute;
+  width: 77%;
+}
+
+.progress-ongoing {
+  height: 100%;
+  background: #f4a900;
+  position: absolute;
+  left: 77%;
+  width: 10%;
+}
+
+.progress-remaining {
+  height: 100%;
+  background: transparent;
+  position: absolute;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-top: 5px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: left;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  transform: translateY(5px);
+}
+
+.ongoing {
+  background: #f4a900;
+}
+
+.remaining {
+  background: #c7c7c7;
+}
+
+.progress-scorecard {
+  margin: 16px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  border-collapse: collapse;
+  border: 1px solid  #e5e7eb;
+  tr:nth-child(2) {
+    font-weight: 600;
+  }
+}
+
+.progress-scorecard td:nth-child(2) {
+  width: 22%;
+}
+
+.progress-scorecard td {
+  border-right:1px solid #e5e7eb;  
+}
+
+.progress-scorecard td:last-child {
+  border-right: none;
+}
+
+.more-scorecards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  padding: 0 15px;
+  font-size: 14px;
+  
+  table {
+    border-collapse: collapse;
+  }
+  td:nth-child(2) {
+    font-weight: 600;
+    text-align: center;
+  }
+
+  td {
+    padding: 8px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
+
+.spmf-button {
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.spmf-button:hover {
+  background-color: #0056b3;
+}
+
+.spmf-button-container {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+
+ p {
+  transform: translateY(5px);
+ }
+}
+
+.semester-select {
+  margin-top: 5px;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #cbc5d0;
+
+  span {
+    margin-right: 10px;
+  }
+}
+
+select {
+  padding: 6px 12px;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  border: 1px solid #cbc5d0;
+  background-color: #f3f4f6;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.grade-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 15px;
+  padding: 0 15px;
+  gap: 20px;
+
+  .grade-table {
+    font-size: 13px;
+    width: 100%;
+    border-collapse: collapse;
+    th {
+      background-color: #00563f; /* Dark green */
+      color: white;
+      padding: 2px;
+      text-align: center;
+    }
+    td {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 2px;
+      text-align: center;
+    }
+  }
+
+  h1 {
+    margin-top: 15px;
+  }
+}
+
+.grade-table td:first-child {
+  font-weight: bold;
+  text-align: center;
+  width: 30%;
+  color: #4e4d4d;
+}
+
+.grade-table td:nth-child(2){
+width: 20%;
+}
+
+.workload-scorecards {
+  border-collapse: collapse;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 5px;
+  margin: 0 15px;
+
+  td:nth-child(2) {
+    font-weight: 600;
+    text-align: center;
+  }
+
+  td {
+    padding: 6px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
+
+.insight-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 15px 0;
+
+  td {
+    padding: 5px;
+  }
+
+  tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  tr:last-child {
+    border-bottom: none;
+  }
+
+  td:first-child {
+    font-weight: bold;
+    text-align: center;
+    width: 5%;
+    color: #f59e0b;
+  }
+}
+
+.planning-overview {
+  p {
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+}
+
+.course-plan {
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 12px;
+  width: 25px;
+  height:25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.course {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  border: 1px solid rgb(203, 203, 203);
+  border-radius: 15px;
+  background: white;
+  padding: 8px 12px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+
+  p {
+    margin: 0px;
+  }
+  p:first-child {
+    font-weight: 500;
+  }
+}
+
+.plan-scorecard {
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  border: none;
+  color: #4e4d4d;
+  margin-bottom: 20px;
+
+  tr:first-child {
+    font-weight: 600;
+    font-size: 15px;
+    color: black;
+  }
+}
+
+.schedule-button {
+  margin-top: 25px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #3b82f6;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.schedule-button:hover {
+  color: #0056b3;
+}
+
+/* Overlay Styling */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* Dimmed, translucent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Hidden by default */
+.hidden {
+  display: none;
+}
+
+/* Inner content box */
+.overlay-content {
+  width: 100%;
+  max-width: 500.1px;
+  height: 100%;
+  max-height: 585.48px;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+/* iframe takes full space */
+.overlay-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

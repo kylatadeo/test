@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLB CAPS</title>
+    <link rel="icon" type="image/png" href="../icons/uplb-logo-no label.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon" />
+    
+    <!-- from general folder -->
+    <link rel="stylesheet" href="../styles/general.css">
+
+    <!--adviser/report-->
+    <link rel="stylesheet" href="styles/preferences.css">
+
+    <script>
+      (function (m, a, z, e) {
+        var s, t;
+        try {
+          t = m.sessionStorage.getItem('maze-us');
+        } catch (err) {}
+      
+        if (!t) {
+          t = new Date().getTime();
+          try {
+            m.sessionStorage.setItem('maze-us', t);
+          } catch (err) {}
+        }
+      
+        s = a.createElement('script');
+        s.src = z + '?apiKey=' + e;
+        s.async = true;
+        a.getElementsByTagName('head')[0].appendChild(s);
+        m.mazeUniversalSnippetApiKey = e;
+      })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '65f6bda7-e9d3-465b-a89d-f3b2567e4c16');
+    </script>
+  </head>
+  <body>
+    <div class="form-container bg-white">
+      <div class="title">
+        <h1 class="txt-17 txt-semibold txt-gray1">Course Plan Preferences</h1>
+        <p class="txt-13"><i>These preferences will help the system generate a personalized course plan for you.</i></p>
+
+        <div class="basic-info">
+          <div class="left">
+            <img src="../icons/profile-user.png">
+            <div>
+              <p class="txt-17 txt-semibold">Student Name</p>
+              <p class="txt-13 txt-gray1">username@up.edu.ph</p>
+            </div>
+          </div>
+          <div style="flex: 1;"></div>
+          <div class="right">
+            <button class="edit-button button bg-white">
+              <span class="material-symbols-outlined">edit_square</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="preference-form txt-gray2 disabled">
+        <div class="row" style="grid-template-columns: 1fr 1fr;">
+          <div class="input-group">
+            <label>Preferred number of units </label>
+            <select class="input-select">
+              <option value="" disabled selected>Select unit range</option>
+              <option>Less than 15 units</option>
+              <option>15 - 18 units</option>
+              <option>18 - 21 units</option>
+              <option>More than 21 units</option>
+            </select>
+          </div>
+        </div>
+      
+        <div class="row"            style="grid-template-columns: 1fr 1fr;">
+          <div class="input-group">
+            <label>Research Track</label>
+            <select class="input-select">
+              <option value="" disabled selected>Select a track</option>
+              <option>Thesis</option>
+              <option>Innovationeering</option>
+              <option>Engineering Industry Research</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Major/Specialization</label>
+            <select class="input-select">
+              <option value="" disabled selected>Select a major</option>
+              <option>None</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row"            style="grid-template-columns: 1fr 1fr;">
+          <div class="input-group">
+            <label>Major/Specialized Courses</label>
+            <select class="input-select">
+              <option value="" disabled selected>Select a course</option>
+              <option>None</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Elective Courses</label>
+            <select class="input-select">
+              <option value="" disabled selected>Select a course</option>
+              <option>None</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row"            style="grid-template-columns: 1fr 1fr;">
+          <div class="input-group">
+            <label>Technical Cognate Courses</label>
+            <div style="display: flex; flex-direction: row; gap: 10px;">
+              <select class="input-select">
+                <option value="" disabled selected>Select a course</option>
+                <option>MGT 131</option>
+                <option>MGT 133</option>
+                <option>CHE 180</option>
+                <option>IE 191</option>
+                <option>CMSC 21</option>
+                <option>CMSC 22</option>
+              </select>
+              <select class="input-select">
+                <option value="" disabled selected>Select a course</option>
+                <option>MGT 131</option>
+                <option>MGT 133</option>
+                <option>CHE 180</option>
+                <option>IE 191</option>
+                <option>CMSC 21</option>
+                <option>CMSC 22</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="row"            style="grid-template-columns: 1fr 1fr;">
+          <div class="input-group">
+            <label>GE Elective Courses</label>
+
+            <div style="display: flex; flex-direction: row; gap: 10px;">
+              <select class="input-select">
+                <option value="" disabled selected>Select a course</option>
+                <option>SAS 1</option>
+                <option>MATH 10</option>
+                <option>SCIENCE 11</option>
+                <option>HUM 3</option>
+                <option>KAS 4</option>
+                <option>PHILARTS 1</option>
+                <option>PHLO 1</option>
+                <option>PS 21</option>
+                <option>SCIENCE 10</option>
+                <option>SOSC 3</option>
+                <option>WIKA 1</option>
+              </select>
+              <select class="input-select">
+                <option value="" disabled selected>Select a course</option>
+                <option>SAS 1</option>
+                <option>MATH 10</option>
+                <option>SCIENCE 11</option>
+                <option>HUM 3</option>
+                <option>KAS 4</option>
+                <option>PHILARTS 1</option>
+                <option>PHLO 1</option>
+                <option>PS 21</option>
+                <option>SCIENCE 10</option>
+                <option>SOSC 3</option>
+                <option>WIKA 1</option>
+              </select>
+              <select class="input-select">
+                <option value="" disabled selected>Select a course</option>
+                <option>SAS 1</option>
+                <option>MATH 10</option>
+                <option>SCIENCE 11</option>
+                <option>HUM 3</option>
+                <option>KAS 4</option>
+                <option>PHILARTS 1</option>
+                <option>PHLO 1</option>
+                <option>PS 21</option>
+                <option>SCIENCE 10</option>
+                <option>SOSC 3</option>
+                <option>WIKA 1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="buttons">
+        <button class="cancel-button bg-gray button txt-white">Cancel</button>
+        <button class="set-button bg-blue button txt-white">Save</button>
+      </div>
+
+    </div>
+  </body>
+
+  <script>
+    document.querySelector(".cancel-button").addEventListener("click", () => {
+    // Access the parent page and hide the overlay
+      window.parent.document.getElementById("preferencesOverlay").classList.add("hidden");
+      window.parent.document.getElementById("preferencesIframe").src = "";
+    });
+
+    document.querySelector(".edit-button").addEventListener("click", function () {
+      const container = document.querySelector(".preference-form");
+
+      // Toggle class
+      container.classList.toggle("disabled");
+    });
+  </script>
+</html>

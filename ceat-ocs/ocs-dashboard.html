@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLB CAPS</title>
+    <link rel="icon" type="image/png" href="../icons/uplb-logo-no label.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon" />
+
+    <!-- from general folder -->
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/sidebar-menu.css">
+    <script type="text/javascript" src="../general.js"></script>
+
+    <!-- adviser/dashboard -->
+    <link rel="stylesheet" href="styles/ocs-dashboard.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="ocs.js"></script>
+
+    <script>
+      (function (m, a, z, e) {
+        var s, t;
+        try {
+          t = m.sessionStorage.getItem('maze-us');
+        } catch (err) {}
+      
+        if (!t) {
+          t = new Date().getTime();
+          try {
+            m.sessionStorage.setItem('maze-us', t);
+          } catch (err) {}
+        }
+      
+        s = a.createElement('script');
+        s.src = z + '?apiKey=' + e;
+        s.async = true;
+        a.getElementsByTagName('head')[0].appendChild(s);
+        m.mazeUniversalSnippetApiKey = e;
+      })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '65f6bda7-e9d3-465b-a89d-f3b2567e4c16');
+    </script>
+  </head>
+
+  <body>
+    <!-- Top Ribbon -->
+    <div id="navbar-container"></div>
+     
+    <!-- Side Bar Menu -->
+    <div id="sidebar-container"></div>       
+
+    <!-- Main Contents -->
+    <main> 
+      <div class="heading1 bg-maroon txt-16 txt-bold txt-white border-round4">CEAT PROGRESS OVERVIEW</div>
+
+      <div class="main-contents bg-white border-lightgray txt-13">
+        <h1 class="txt-24 txt-semibold txt-gray1">Greetings, CEAT-OCS ADMIN!</h1>
+        <p class="txt-15 txt-regular txt-gray2">Welcome to the CEAT Progress Overview. This dashboard shows how CEAT Students are progressing through their academics.</p>
+
+        <select> 
+          <option value="" disabled selected>Filter by Degree Program</option>
+          <option>BS ABE</option>
+          <option>BS CE</option>
+          <option>BS ChE</option>
+          <option>BS EE</option>
+          <option>BS IE</option>
+          <option>BS ME</option>
+          <option>BS MatE</option>
+        </select>
+
+        <div class="chart-container0">
+          <div class="total-students">
+            <p class="txt-semibold txt-maroon">205</p>
+            <p class="txt-medium txt-19">Total CEAT students</p>
+            <div class="mini-scorecard">
+              <div class="scores">
+                <p>195</p>
+                <p>Active</p>
+              </div>
+              <div class="scores">
+                <p>10</p>
+                <p>Inactive</p>
+              </div>
+              <div class="scores">
+                <p>33</p>
+                <p>Graduating</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-lightgray chart-box" style="height: 225.66px;">
+            <p style="margin: 0px;">Classification</p>
+            <div id="chart_div"></div>
+          </div>
+        </div>
+
+        <div class="chart-container">
+          <div class="system-remarks">
+            <p>Unit Load of Students</p>
+            <table>
+              <tr>
+                <td>Regular Load</td>
+                <td>178</td>
+              </tr>
+              <tr>
+                <td>Underload</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>Overload</td>
+                <td>6</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="border-lightgray chart-box">
+            <p>Enrollment Status</p>
+            <div class="piehole ">
+              <p>75%</p>
+              <p>Enrolled</p>
+            </div>
+            <div class="chart-innerbox">
+              <div id="donutchart2" style="width: 100%; height: 170px;"></div>
+
+              <div class="legend">
+                <div>
+                  <span class="dot legend1"></span> 
+                  <span class="txt-14">Active and enrolled</span>
+                </div>
+                <div>
+                  <span class="dot legend2"></span> 
+                  <span class="txt-14">Active but pending erollment</span>
+                </div>
+                <div>
+                  <span class="dot legend3"></span> 
+                  <span class="txt-14">On leave of absence</span>
+                </div>
+                <div>
+                  <span class="dot legend4"></span> 
+                  <span class="txt-14">AWOL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-lightgray chart-box">
+            <p>Scholastic Standing</p>
+            <div class="piehole ">
+              <p>59%</p>
+              <p>Good</p>
+            </div>
+            <div class="chart-innerbox">
+              <div id="donutchart1" style="width: 100%; height: 170px;"></div>
+            
+              <div class="legend">
+                <div>
+                  <span class="dot legend1"></span> 
+                  <span class="txt-14">Good</span>
+                </div>
+                <div>
+                  <span class="dot legend2"></span> 
+                  <span class="txt-14">Warning</span>
+                </div>
+                <div>
+                  <span class="dot legend3"></span> 
+                  <span class="txt-14">Probation</span>
+                </div>
+                <div>
+                  <span class="dot legend4"></span> 
+                  <span class="txt-14">Dismissed</span>
+                </div>
+                <div>
+                  <span class="dot legend5"></span> 
+                  <span class="txt-14">Permanently Disqualified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="system-remarks">
+            <p>Course Work Revisions</p>
+            <table>
+              <tr>
+                <td>Needs to revise approved POCW </td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Needs to accomplish GE Plan</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Needs to accomplish POCW</td>
+                <td>1</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="border-lightgray chart-box">
+            <p>Progress by Units</p>
+            <div class="piehole ">
+              <p>46%</p>
+              <p>On Time</p>
+            </div>
+            <div class="chart-innerbox">
+              <div id="donutchart3" style="width: 100%; height: 170px;"></div>
+
+              <div class="legend">
+                <div>
+                  <span class="dot legend1"></span> 
+                  <span class="txt-14">On Time</span>
+                </div>
+                <div>
+                  <span class="dot legend4"></span> 
+                  <span class="txt-14">Behind</span>
+                </div>
+                <span class="label">Shows student’s progress based on the number of completed units compared to the expected pace of their curriculum.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-lightgray chart-box">
+            <p>SPMF Monitoring</p>
+            <div class="piehole ">
+              <p>67%</p>
+              <p>Accomplished</p>
+            </div>
+            <div class="chart-innerbox">
+              <div id="donutchart4" style="width: 100%; height: 170px;"></div>
+            
+              <div class="legend">
+                <div>
+                  <span class="dot legend1"></span> 
+                  <span class="txt-14">Accomplished</span>
+                </div>
+                <div>
+                  <span class="dot legend2"></span> 
+                  <span class="txt-14">Pending adviser review</span>
+                </div>
+                <div>
+                  <span class="dot legend4"></span> 
+                  <span class="txt-14">Not yet finalized</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-contents bg-white border-lightgray txt-13">
+        <h1 class="txt-24 txt-semibold txt-gray1">Students</h1>
+
+        <div style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;">
+          <div class="tabs">
+            <div class="tab1 active1">
+              <span class="badge txt-12">205</span>
+              <span class="txt-14">View All</span>
+            </div>
+  
+            <div class="tab1 inactive1">
+              <span class="badge txt-12">21</span>
+              <span class="txt-14">BS ABE</span>
+            </div>
+  
+            <div class="tab1 inactive1">
+              <span class="badge txt-12">34</span>
+              <span class="txt-14">BS CE</span>
+            </div>
+  
+            <div class="tab1 inactive1">
+              <span class="badge txt-12">29</span>
+              <span class="txt-14">BS ChE</span>
+            </div>
+            
+            <div class="tab1 inactive1">
+              <span class="badge txt-12">28</span>
+              <span class="txt-14">BS EE</span>
+            </div>
+
+            <div class="tab1 inactive1">
+              <span class="badge txt-12">37</span>
+              <span class="txt-14">BS IE</span>
+            </div>
+
+            <div class="tab1 inactive1">
+              <span class="badge txt-12">34</span>
+              <span class="txt-14">BS ME</span>
+            </div>
+
+            <div class="tab1 inactive1">
+              <span class="badge txt-12">22</span>
+              <span class="txt-14">BS MatE</span>
+            </div>
+          </div>
+
+          <div class="search-box">
+            <input type="text" placeholder="Search a student..." />
+            <span class="material-symbols-outlined">search</span>
+          </div>
+        </div>
+
+        <table class="student-table txt-13">
+          <thead>
+            <tr>
+              <th style="width: 100px;">Name</th>
+              <th style="width: 80px;">Degree Program</th>
+              <th>Classification</th>
+              <th>Status</th>
+              <th style="width: 100px;">Adviser</th>
+              <th>SPMF Monitoring Status</th>
+              <th>Unit Load</th>
+              <th>Course Work Revisions</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="txt-medium">Student 1</td>
+              <td>BS IE</td>
+              <td>Senior</td>
+              <td class="txt-green txt-semibold">Enrolled</td>
+              <td>Faculty 1</td>
+              <td>
+                <span class="badge green">Accomplished</span>
+              </td>
+              <td class="txt-green txt-semibold">Regular</td>
+              <td class="txt-semibold txt-red">Needs to revise approved POCW</td>
+              <td>
+                <button class="view-button button">
+                  <span class="material-symbols-outlined">visibility</span>
+                </button>
+                <button class="mail-button button">
+                  <span class="material-symbols-outlined">mail</span>
+              </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="txt-medium">Student 2</td>
+              <td>BS CE</td>
+              <td>Junior</td>
+              <td class="txt-green txt-semibold">Enrolled</td>
+              <td>Faculty 2</td>
+              <td>
+                <span class="badge green">Accomplished</span>
+              </td>
+              <td class="txt-green txt-semibold">Regular</td>
+              <td class="txt-semibold txt-red">Needs to accomplish GE Plan</td>
+              <td>
+                <button class="view-button button">
+                  <span class="material-symbols-outlined">visibility</span>
+                </button>
+                <button class="mail-button button">
+                  <span class="material-symbols-outlined">mail</span>
+              </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="txt-medium">Student 3</td>
+              <td>BS EE</td>
+              <td>Junior</td>
+              <td class="txt-green txt-semibold">Enrolled</td>
+              <td>Faculty 3</td>
+              <td>
+                <span class="badge yellow">Pending adviser review</span>
+              </td>
+              <td class="txt-green txt-semibold">Regular</td>
+              <td class="txt-semibold txt-red">Needs to accomplish POCW</td>
+              <td>
+                <button class="view-button button">
+                  <span class="material-symbols-outlined">visibility</span>
+                </button>
+                <button class="mail-button button">
+                  <span class="material-symbols-outlined">mail</span>
+              </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="txt-medium">Student 4</td>
+              <td>BS IE</td>
+              <td>Sophomore</td>
+              <td class="txt-yellow txt-semibold">Not enrolled</td>
+              <td>Faculty 4</td>
+              <td>
+                <span class="badge red">Not accomplished</span>
+              </td>
+              <td class="txt-gray1">N/A</td>
+              <td class="txt-gray1">N/A</td>
+              <td>
+                <button class="view-button button">
+                  <span class="material-symbols-outlined">visibility</span>
+                </button>
+                <button class="mail-button button">
+                  <span class="material-symbols-outlined">mail</span>
+              </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="txt-medium">Student 5</td>
+              <td>BS ChE</td>
+              <td>Freshman</td>
+              <td class="txt-yellow txt-semibold">Not enrolled</td>
+              <td>Faculty 5</td>
+              <td>
+                <span class="badge red">Not accomplished</span>
+              </td>
+              <td class="txt-gray1">N/A</td>
+              <td class="txt-gray1">N/A</td>
+              <td>
+                <button class="view-button button">
+                  <span class="material-symbols-outlined">visibility</span>
+                </button>
+                <button class="mail-button button">
+                  <span class="material-symbols-outlined">mail</span>
+              </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- Slide-in report -->
+    <div class="report-overlay" id="reportPanel">
+      <div class="report-content">
+        <div class="frame-buttons">
+          <div style="display: flex; flex:1; justify-content: start;">
+            <button class="back-button bg-gray txt-white"  id="backPrevious" style="display: none;">
+              <span class="material-symbols-outlined">
+                arrow_back</span>
+            </button>
+          </div>
+          
+          <div style="display: flex; flex:1; justify-content: end;">
+            <button class="close-button bg-red txt-white"  id="closeReport">
+              <span class="material-symbols-outlined">
+                close</span>
+            </button>
+          </div>
+        </div>
+        <iframe id="panelFrame" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+    
+    <!-- Overlay Container -->
+    <div id="reminderOverlay" class="overlay hidden">
+      <div class="overlay-content">
+        <iframe id="reminderIframe" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const panelFrame = document.getElementById('panelFrame');
+
+    document.querySelectorAll('.view-button').forEach(button => {
+      button.addEventListener('click', () => {
+      document.getElementById('reportPanel').classList.add('active');
+      document.body.classList.add('no-scroll');
+      panelFrame.src = 'ocs-report.html';
+      });
+    });
+
+    document.getElementById('closeReport').addEventListener('click', () => {
+      document.getElementById('reportPanel').classList.remove('active');
+      document.body.classList.add('no-scroll');
+      panelFrame.src = '';
+    });
+
+    document.getElementById('closeReport').addEventListener('click', () => {
+      document.getElementById('reportPanel').classList.remove('active');
+      document.body.classList.remove('no-scroll'); // This should restore scrolling
+      panelFrame.src = '';
+    });
+
+    // Optional: allow iframe to communicate with parent
+    window.addEventListener('message', (event) => {
+      if (event.data === 'load-spmf') {
+        panelFrame.src = '../student/spmf2.html';
+        
+        document.getElementById('backPrevious').style.display = 'inline-block';
+        document.getElementById('closeReport').style.display = 'none';
+      }
+      if (event.data === 'load-report') {
+        panelFrame.src = 'ocs-report.html';
+
+        document.getElementById('closeReport').style.display = 'inline-block';
+        document.getElementById('backPrevious').style.display = 'none';
+      }
+    });
+
+    document.getElementById('backPrevious').addEventListener('click', () => {
+    // Tell the parent to load report.html back into the iframe
+    window.parent.postMessage('load-report', '*');
+    });
+
+    document.querySelectorAll(".reminder-button").forEach(button => {
+    button.addEventListener("click", () => {
+      document.getElementById("reminderOverlay").classList.remove("hidden");
+      document.getElementById("reminderIframe").src = "ocs-reminder.html";
+    });
+    });
+
+    function closeReminderForm() {
+    const overlay = document.getElementById("reminderOverlay");
+    overlay.classList.add("hidden");
+    document.getElementById("reminderIframe").src = "";
+    }
+
+    document.querySelectorAll(".mail-button").forEach(button => {
+    button.addEventListener("click", () => {
+    window.location.href = "ocs-messaging.html";
+    });
+  });
+  </script>
+</html>

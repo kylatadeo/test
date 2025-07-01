@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLB CAPS</title>
+    <link rel="icon" type="image/png" href="../icons/uplb-logo-no label.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon" />
+    
+    <!-- from general folder -->
+    <link rel="stylesheet" href="../styles/general.css">
+
+    <!--adviser/report-->
+    <link rel="stylesheet" href="styles/report.css">
+
+    <script>
+      (function (m, a, z, e) {
+        var s, t;
+        try {
+          t = m.sessionStorage.getItem('maze-us');
+        } catch (err) {}
+      
+        if (!t) {
+          t = new Date().getTime();
+          try {
+            m.sessionStorage.setItem('maze-us', t);
+          } catch (err) {}
+        }
+      
+        s = a.createElement('script');
+        s.src = z + '?apiKey=' + e;
+        s.async = true;
+        a.getElementsByTagName('head')[0].appendChild(s);
+        m.mazeUniversalSnippetApiKey = e;
+      })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '65f6bda7-e9d3-465b-a89d-f3b2567e4c16');
+    </script>
+  </head>
+
+  <body>
+    <main>
+      <div class="report-container">
+        <div class="progress-overview">
+          <h1 class="txt-17 txt-semibold txt-gray1">Advisee Progress and Performance Report</h1>
+
+          <div class="basic-info">
+            <div>
+              <img src="../icons/profile-user.png">
+            </div>
+            <div>
+              <p class="txt-20 txt-semibold">Student Name</p>
+              <p class="txt-13 txt-gray1">202X-XXXXX</p>
+            </div>
+            <!--<div class="info-badge">
+              <p class="badge light-gray2 txt-13">📅 Consultation | Aug 17 2:30-3:00 PM</p>
+            </div>-->
+          </div>
+
+          <h1 class="txt-17 txt-semibold txt-gray1">Degree Progress Overview</h1>
+
+          <div class="progress-container">
+            <div class="progress-info">
+              <span class="txt-20 txt-semibold">77.5%</span>
+              <span class="progress-text txt-13 txt-gray2">(124 units taken out of 160 units)</span>
+            </div>
+          
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+              <div class="progress-ongoing"></div>
+              <div class="progress-remaining"></div>
+            </div>
+          
+            <div class="legend">
+              <span class="legend-item txt-13 txt-gray2">
+                  <span class="dot ongoing"></span> 
+                  <span>16 units in progress</span>
+              </span>
+              <span class="legend-item txt-13 txt-gray2">
+                  <span class="dot remaining"></span> 
+                  <span>20 units to be taken</span>
+              </span>
+            </div>
+          </div>
+          
+          <table class="progress-scorecard">
+            <tr>
+              <td>Cumulative GPA</td>
+              <td>Classification</td>
+              <td>Progress by Units</td>
+              <td>Progress by Critical Path</td>
+            </tr>
+            <tr>
+              <td>1.72</td>
+              <td>Senior</td>
+              <td>On Time</td>
+              <td>On Time</td>
+            </tr>
+          </table>
+
+          <h1 class="txt-15 txt-semibold txt-maroon"><i>Academic Profile</i></h1>
+
+          <div class="more-scorecards">
+            <table>
+              <tr>
+                <td>Enrollment Status</td>
+                <td>Enrolled</td>
+              </tr>
+              <tr>
+                <td>Residency</td>
+                <td>3 years</td>
+              </tr>
+              <tr>
+                <td>Projected Graduation</td>
+                <td>2nd sem AY 24-25</td>
+              </tr>
+            </table>
+
+            <table>
+              <tr>
+                <td>Research Track</td>
+                <td>EIR</td>
+              </tr>
+              <tr>
+                <td>Research Group</td>
+                <td>AISG</td>
+              </tr>
+              <tr>
+                <td>Major/Specialization</td>
+                <td>N/A</td>
+              </tr>
+            </table>
+          </div>
+
+          <h1 class="txt-17 txt-semibold txt-gray1" style="margin-top: 30px;">Performance Overview</h1>
+
+          <div class="semester-select">
+            <div>
+              <span class="txt-18 txt-maroon txt-bold">AY 2023-2024</span>
+              <span class="txt-18 txt-maroon">2nd Semester</span>
+            </div>
+            <div>
+              <select>
+                <option>1st sem AY 21-22</option>
+                <option>2nd sem AY 21-22</option>
+                <option>1st sem AY 22-23</option>
+                <option>2nd sem AY 22-23</option>
+                <option>1st sem AY 23-24</option>
+                <option>2nd sem AY 23-24</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grade-info">
+            <div>
+              <table class="grade-table">
+                <thead>
+                    <tr>
+                        <th>Courses</th>
+                        <th>Grades</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>IE 136</td>
+                      <td>2.00</td>
+                      <td>Competent</td>
+                    </tr>
+                    <tr>
+                      <td>IE 144</td>
+                      <td>1.75</td>
+                      <td>Above Average</td>
+                    </tr>
+                    <tr>
+                      <td>IE 164</td>
+                      <td>2.00</td>
+                      <td>Competent</td>
+                    </tr>
+                    <tr>
+                      <td>IE 184</td>
+                      <td>1.75</td>
+                      <td>Above Average</td>
+                    </tr>
+                    <tr>
+                      <td>ENSC 14A</td>
+                      <td>2.00</td>
+                      <td>Competent</td>
+                    </tr>
+                    <tr>
+                      <td>SAS 1</td>
+                      <td>1.00</td>
+                      <td>Outstanding</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+              
+            <div>
+              <h1 class="txt-15 txt-semibold txt-gray2"><i>Academic Metrics</i></h1>
+              
+              <table class="workload-scorecards">
+                <tr>
+                  <td>Semestral GPA</td>
+                  <td>⭐ 1.77</td>
+                </tr>
+                <tr>
+                  <td>Scholastic Standing</td>
+                  <td class="txt-semibold txt-green">Good</td>
+                </tr>
+                <tr>
+                  <td>Course Repeated</td>
+                  <td class="txt-semibold txt-green">None</td>
+                </tr>
+                <tr>
+                  <td>Overall Workload</td>
+                  <td><div class="txt-semibold light-blue" style="padding: 2px; border-radius: 15px;">Manageable</div></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!--<div style="
+             padding: 10px 15px;
+             border-bottom: 1px solid #cbc5d0;
+             width: 100%;
+             margin-top: 10px;">
+              <span class="txt-18 txt-maroon txt-bold">Insights</span>
+          </div>
+
+          <table class="insight-table">
+              <tr>
+                <td>1</td>
+                <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</td>
+              </tr>
+              <td>3</td>
+              <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</td>
+            </tr>
+          </table>-->
+        </div>
+
+        <div class="planning-overview">
+          <div class="title txt-17 txt-semibold txt-gray1">
+            <span class="material-symbols-outlined">bookmark</span>
+            <span>Enrolled course plan</span>
+          </div>
+          <p class="txt-13 txt-gray2"><i>For the 1st sem AY 2024-2025</i></p>
+          
+          <div class="course-plan">
+            <div class="course">
+              <span class="icon orange">📙</span>
+              <div class="text">
+                <p class="txt-gray2">IE 199</p>
+                <p class="badge light-blue txt-12">• moderate</p>
+                <p class="badge green2 txt-12">• good</p>
+                <p class="badge light-gray2 txt-12">• 1 unit</p>
+              </div>
+            </div>
+            <div class="course">
+              <span class="icon orange">📙</span>
+              <div class="text">
+                <p class="txt-gray2">IE 158</p>
+                <p class="badge light-blue txt-12">• easy</p>
+                <p class="badge green2 txt-12">• good</p>
+                <p class="badge light-gray2 txt-12">• 3 units</p>
+              </div>
+            </div>
+            <div class="course">
+              <span class="icon orange">📙</span>
+              <div class="text">
+                <p class="txt-gray2">IE 165</p>
+                <p class="badge light-blue txt-12">• moderate</p>
+                <p class="badge green2 txt-12">• good</p>
+                <p class="badge light-gray2 txt-12">• 3 units</p>
+              </div>
+            </div>
+            <div class="course">
+              <span class="icon orange">📙</span>
+              <div class="text">
+                <p class="txt-gray2">IE 200C</p>
+                <p class="badge light-blue txt-12">• very difficult</p>
+                <p class="badge green2 txt-12">• good</p>
+                <p class="badge light-gray2 txt-12">• 3 units</p>
+              </div>
+            </div>
+            <div class="course">
+              <span class="icon orange">📙</span>
+              <div class="text">
+                <p class="txt-gray2">MGT 131</p>
+                <p class="badge light-blue txt-12">• easy</p>
+                <p class="badge green2 txt-12">• good</p>
+                <p class="badge light-gray2 txt-12">• 3 units</p>
+              </div>
+            </div>
+            <div class="course">
+              <span class="icon orange">📙</span>
+              <div class="text">
+                <p class="txt-gray2">IE 185</p>
+                <p class="badge light-blue txt-12">• moderate</p>
+                <p class="badge green2 txt-12">• good</p>
+                <p class="badge light-gray2 txt-12">• 3 units</p>
+              </div>
+            </div>
+            <div class="course">
+              <span class="icon orange">📙</span>
+              <div class="text">
+                <p class="txt-gray2">HK 12</p>
+                <p class="badge light-blue txt-12">• very easy</p>
+                <p class="badge green2 txt-12">• good</p>
+                <p class="badge light-gray2 txt-12">• 2 non-GPA units</p>
+              </div>
+            </div>
+          </div>
+
+          <table class="plan-scorecard">
+            <tr>
+              <td>16</td>
+              <td>Manageable</td>
+              <td>1.75</td>
+            </tr>
+            <tr>
+              <td>Total units</td>
+              <td>Overall Workload</td>
+              <td>Predicted GPA</td>
+            </tr>
+          </table>
+
+          <p class="txt-14 txt-gray1"><i>The course plan outlines the courses a student intends to take in the upcoming semester and is reflected in the SPMF. Advisers are expected to guide students on their course selections and address any concerns before signing the SPMF.</i></p>
+
+          <div class="spmf-button-container">
+            <button class="spmf-button bg-blue button txt-white">Review Progress Flowchart</button>
+            <p class="badge green2 txt-13">✔ Signed</p>
+          </div>
+
+            <!--<button class="schedule-button">
+              <span class="material-symbols-outlined">calendar_month
+              </span>
+              <span class="txt-semibold txt-14"><u>Schedule a consulation instead</u></span>
+            </button>-->
+        </div>
+      </div>
+    </main>
+
+    <!-- Overlay Container -->
+    <div id="scheduleOverlay" class="overlay hidden">
+      <div class="overlay-content">
+        <iframe id="scheduleIframe" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    document.querySelector('.spmf-button').addEventListener('click', () => {
+      // Tell the parent window to load spmf.html in the iframe
+      window.parent.postMessage('load-spmf', '*');
+    });
+
+    document.querySelectorAll(".schedule-button").forEach(button => {
+    button.addEventListener("click", () => {
+      document.getElementById("scheduleOverlay").classList.remove("hidden");
+      document.getElementById("scheduleIframe").src = "schedule-form.html";
+    });
+    });
+
+    function closeScheduleForm() {
+      const overlay = document.getElementById("scheduleOverlay");
+      overlay.classList.add("hidden");
+      document.getElementById("scheduleIframe").src = "";
+    }
+  </script>
+</html>

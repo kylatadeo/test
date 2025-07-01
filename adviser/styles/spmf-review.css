@@ -1,0 +1,150 @@
+body {
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 1216px;
+  gap: 10px;
+}
+
+.spmf-content {
+  top: 0;
+  right: 0;
+  width: 100%; /* Adjust width here */
+  height: 100%;
+  background-color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 645px; 
+}
+
+.spmf-iframe {
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.spmf-iframe::-webkit-scrollbar {
+  display: none;
+}
+
+.review-form {
+  background-color: white;
+  border-radius: 4px;
+  padding: 16px 24px;
+  line-height: 150%;
+  margin-bottom: 16px;
+  max-width: 98vw;
+  border-color: #e5e7eb;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  height: 579px;
+
+  p {
+    border-bottom: 1px solid #cbc5d0;
+    padding: 3px 0;
+  }
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+
+  span:first-child {
+    transform: translateY(2px);
+  }
+}
+
+.comment-box {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 10px 14px;
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 100px;
+}
+
+.comment-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  background: transparent;
+}
+
+.textarea-box {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  resize: vertical;
+  height: 80px;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 15px;
+
+  p {
+    margin-top: 15px;
+  }
+}
+
+.upload-label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.upload-input {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.upload-input:hover {
+  border-color: #666;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+.confirm-button, .reset-button {
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.confirm-button:hover {
+  background-color: #0056b3;
+}
+
+.reset-button:hover {
+  background-color: #79757c;
+}

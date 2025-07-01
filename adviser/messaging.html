@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLB CAPS</title>
+    <link rel="icon" type="image/png" href="../icons/uplb-logo-no label.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon" />
+
+	  <!-- CSS and JS -->
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/sidebar-menu.css">
+    <link rel="stylesheet" href="styles/messaging.css"> 
+    <script type="text/javascript" src="../general.js" defer></script>
+
+    <script>
+      (function (m, a, z, e) {
+        var s, t;
+        try {
+          t = m.sessionStorage.getItem('maze-us');
+        } catch (err) {}
+      
+        if (!t) {
+          t = new Date().getTime();
+          try {
+            m.sessionStorage.setItem('maze-us', t);
+          } catch (err) {}
+        }
+      
+        s = a.createElement('script');
+        s.src = z + '?apiKey=' + e;
+        s.async = true;
+        a.getElementsByTagName('head')[0].appendChild(s);
+        m.mazeUniversalSnippetApiKey = e;
+      })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '65f6bda7-e9d3-465b-a89d-f3b2567e4c16');
+    </script>
+  </head>
+
+  <body>
+    <!-- Top Ribbon -->
+    <div id="navbar-container"></div>
+     
+    <!-- Side Bar Menu -->
+    <div id="sidebar-container"></div>       
+
+    <!-- Main Contents -->
+    <main>
+    <div class="container">
+      <div class="panel bg-white pad-20">
+        <div class="head">
+          <h1 class="txt-24 txt-semibold txt-gray1">Messages</h1>
+        </div>
+        <button class="button new-message bg-blue txt-white txt-15 txt-semibold" style="
+        display: flex;
+        align-items: center;">
+          <span class="material-symbols-outlined" style="margin-right: 10px;">mail</span>
+          <span>New messages</span>
+        </button>
+        <div class="side-menu">
+          <ul>
+            <li id="inbox">
+              <button class="button">
+                <span class="material-symbols-outlined">inbox</span>
+                <span>Inbox</span>
+              </button>
+              <span style="
+                background-color: #3b82f6;
+                color: white;
+                padding: 3px 4px;
+                border-radius: 10px;
+                font-size: 13px;
+              ">18</span>
+            </li>
+            <!--<li>
+              <button class="button">
+                <span class="material-symbols-outlined">chat</span>
+                <span>Chats</span>
+              </button>
+              <span style="
+              color: #aaaaaa;
+              font-size: 14px;">10</span>
+            </li>-->
+            <li>
+              <button class="button">
+                <span class="material-symbols-outlined">assignment</span>
+                <span>Requests</span>
+              </button>
+              <span style="
+              color: #aaaaaa;
+              font-size: 14px;">5</span>
+            </li>
+            <li>
+              <button class="button">
+                <span class="material-symbols-outlined">alarm</span>
+                <span>Reminders</span>
+              </button>
+              <span style="
+              color: #aaaaaa;
+              font-size: 14px;">2</span>
+            </li>
+            <li>
+              <button class="button">
+                <span class="material-symbols-outlined">send</span>
+                <span>Sent</span>
+              </button>
+              <span style="
+              color: #aaaaaa;
+              font-size: 14px;">3</span>
+            </li>
+            <li>
+              <button class="button">
+                <span class="material-symbols-outlined">draft</span>
+                <span>Drafts</span>
+              </button>
+              <span style="
+              color: #aaaaaa;
+              font-size: 14px;">0</span>
+            </li>
+          </ul>
+        </div>
+        <div class="head">
+          <h1 class="txt-19 txt-semibold txt-gray1">Shortcuts</h1>
+        </div>
+        <div class="side-menu">
+          <ul>
+            <li class="activate">
+              <button class="button">
+                <span class="material-symbols-outlined">account_circle</span>
+                <span>Advisee 1</span>
+              </button>
+              <span style="
+              color: #aaaaaa;
+              font-size: 14px;">12</span>
+            </li>
+            <li>
+              <button class="button">
+                <span class="material-symbols-outlined">account_circle</span>
+                <span>Advisee 2</span>
+              </button>
+              <span style="
+              color: #aaaaaa;
+              font-size: 14px;">5</span>
+            </li>
+            <li>
+              <button class="button">
+                <span class="material-symbols-outlined">account_circle</span>
+                <span>Advisee 3</span>
+              </button>
+              <span style="
+              color: #aaaaaa;
+              font-size: 14px;">2</span>
+            </li>
+            <li>
+              <button class="button">
+                <span class="material-symbols-outlined">account_circle</span>
+                <span>Advisee 4</span>
+              </button>
+              <span style="
+              color: #aaaaaa;
+              font-size: 14px;">1</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="threads" class="bg-body pad-20">
+        <div class="search-box">
+          <span class="material-symbols-outlined">search</span>
+          <input type="text" placeholder="shortcut:Advisee 1" />
+          <span class="material-symbols-outlined">tune</span>
+        </div>
+
+        <div class="thread active">
+          <div class="inside">
+            <div class="name-item">
+              <span class="txt-16 txt-bold">Kevin Dela Cruz</span>
+              <span class="txt-14 txt-gray3">10:00 AM</span>
+            </div>
+            <p class="txt-16 txt-bold">SPMF Review Request</p>
+            <p class="truncate txt-15 txt-gray3" style="width: 510px;">Dear Adviser, You have received a new SPMF review request from one of your advisees.
+            </p>
+          </div>
+        </div>
+
+        <div class="thread">
+          <div class="inside">
+            <div class="name-item">
+              <span class="txt-16 txt-bold">Kevin Dela Cruz</span>
+              <span class="txt-14 txt-gray3">May 19</span>
+            </div>
+            <p class="txt-16 txt-bold">Concern regarding Course Plan</p>
+            <p class="truncate txt-15 txt-gray3" style="width: 510px;">Dear Prof., I hope this email finds you well. I’m writing to consult you regarding my  course plan for the upcoming semester, and I would appreciate your guidance on the matter.
+            </p>
+          </div>
+        </div>
+
+        <div class="thread">
+          <div class="inside">
+            <div class="name-item">
+              <span class="txt-16 txt-bold">Kevin Dela Cruz</span>
+              <span class="txt-14 txt-gray3">Mar 21</span>
+            </div>
+            <p class="txt-16 txt-bold">Request for Signature</p>
+            <p class="truncate txt-15 txt-gray3" style="width: 510px;">Good day, I'm writing to humbly request for your signature for my POCW revision.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="window" class="bg-white pad-20">
+        <div class="options txt-gray3">
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">print</span>
+          <span class="material-symbols-outlined"> delete</span>
+          <span class="material-symbols-outlined">more_vert</span>
+        </div>
+        <div class="content">
+          <div class="txt-14 txt-gray1" style="margin-top: 15px;">Today, 14th June 2025, 10:00 AM</div>
+          <div class="txt-22 txt-semibold" style="margin-top: 10px;">SPMF Review Request</div>
+
+          <div class="date">
+            <div class="info">
+              <img src="../icons/profile-user.png">
+              <p class="txt-18 txt-semibold">Kevin Dela Cruz</p>
+            </div>
+            <div class="txt-14 txt-gray1" style="padding-bottom: 5px;">Today, 06.14.2025, 10:00 AM</div>
+          </div>
+
+          <div class="mail-content txt-15">
+            <p>Dear Adviser,</p>
+            <p>You have received a new SPMF review request from Kevin Dela Cruz.</p>
+            <p>You may review the course plan through the attached documents and give your feedback using this thread or through direct message. </p>
+
+            <div class="attach">
+              <div class="file-card">
+                <div class="file-icon">PDF</div>
+                <div class="file-info">
+                  <div class="name">Course Plan_Dela Cruz</div>
+                  <div class="type">PDF</div>
+                </div>
+                <div class="download-btn">
+                  <span class="material-symbols-outlined">download</span>
+                </div>
+              </div>
+              <div class="file-card">
+                <div class="file-icon">PDF</div>
+                <div class="file-info">
+                  <div class="name">SPMF_Dela Cruz</div>
+                  <div class="type">PDF</div>
+                </div>
+                <div class="download-btn">
+                  <span class="material-symbols-outlined">download</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="compose">
+          <div class="write">
+            <textarea placeholder="Write a message..." class="textarea-box"></textarea>
+          </div>
+          <div class="styling">
+            <span class="material-symbols-outlined">format_bold</span>
+            <span class="material-symbols-outlined">format_italic</span>
+            <span class="material-symbols-outlined">format_underlined</span>
+            <span class="material-symbols-outlined">format_color_text</span>
+            <span class="material-symbols-outlined" style="margin-right: 100px;">format_ink_highlighter</span>
+            <span class="material-symbols-outlined">format_list_bulleted</span>
+            <span class="material-symbols-outlined">format_list_numbered</span>
+            <span class="material-symbols-outlined">format_align_left</span>
+            <span class="material-symbols-outlined">format_align_center</span>
+            <span class="material-symbols-outlined">format_align_right</span>
+            <span class="material-symbols-outlined">format_align_justify</span>
+          </div>
+          <div class="send">
+            <div>
+              <span class="material-symbols-outlined">attachment</span>
+              <span class="material-symbols-outlined">link</span>
+            </div>
+            <div style="display: flex; align-items: center">
+              <span class="material-symbols-outlined">delete</span>
+              <span class="material-symbols-outlined">more_vert</span>
+              <button class="button bg-blue send-button">
+                <span>Send</span>
+                <span class="material-symbols-outlined">send</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    </main>
+
+  <script>
+    
+  </script>
+  </body>

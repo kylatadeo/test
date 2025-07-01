@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+
+    <script>
+      (function (m, a, z, e) {
+        var s, t;
+        try {
+          t = m.sessionStorage.getItem('maze-us');
+        } catch (err) {}
+      
+        if (!t) {
+          t = new Date().getTime();
+          try {
+            m.sessionStorage.setItem('maze-us', t);
+          } catch (err) {}
+        }
+      
+        s = a.createElement('script');
+        s.src = z + '?apiKey=' + e;
+        s.async = true;
+        a.getElementsByTagName('head')[0].appendChild(s);
+        m.mazeUniversalSnippetApiKey = e;
+      })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '65f6bda7-e9d3-465b-a89d-f3b2567e4c16');
+    </script>
+  </head>
+  <body>
+    <!-- Top Ribbon -->
+    <nav class="bg-white">
+      <div class="header-left">
+        <button onclick="toggleSideBar()" id="toggle-button" class="button bg-white txt-gray1 txt-bold">☰</button>
+        <img src="../icons/uplb-logo-w label.webp">
+        <h1 class="txt-20 txt-semibold txt-gray1">CAPS</h1>
+      </div>
+      <div class="header-middle"></div>
+      <div class="header-right">
+        <button id="mail">
+          <img class="mail" src="../icons/email.png">
+        </button>
+        <button id="profile">
+          <img class="profile" src="../icons/profile-user.png">
+        </button>
+        <button class="button bg-white txt-gray1 txt-bold">⁝</button>
+      </div>
+    </nav> 
+  </body>
+</html>
